@@ -16,32 +16,42 @@ public class MeepMeepTesting {
                 .build();
 
         myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(30, 60, 0))
-//               // line up with sample and intake
-                .strafeToLinearHeading(new Vector2d(37,25), Math.toRadians(0))
+
+                // score preload
+                .strafeToLinearHeading(new Vector2d(53,53), Math.toRadians(-135))
                 .waitSeconds(2)
 
+                // line up with sample and intake
+//                .splineToLinearHeading(new Pose2d(37,25, Math.toRadians(0)), 0)
+                .strafeToLinearHeading(new Vector2d(37,40), Math.toRadians(0))
+                .strafeTo(new Vector2d(37, 25))
+                .waitSeconds(2)
+
+
                 // line up with basket and score
-                .splineToLinearHeading(new Pose2d(53,53, Math.toRadians(-135)), 0)
+                .strafeToLinearHeading(new Vector2d(53,53), Math.toRadians(-135))
                 .waitSeconds(2)
 
                 // line up with sample 2 and intake
-                .splineToLinearHeading(new Pose2d(47, 25, Math.toRadians(0)), 0)
+//                .splineToLinearHeading(new Pose2d(47, 25, Math.toRadians(0)), 0)
+                .strafeToLinearHeading(new Vector2d(47,25), Math.toRadians(0))
                 .waitSeconds(2)
 
                 // line up with basket and score
-                .splineToLinearHeading(new Pose2d(53,53, Math.toRadians(-135)), 0)
+                .strafeToLinearHeading(new Vector2d(53,53), Math.toRadians(-135))
                 .waitSeconds(2)
 
                 // line up with sample 3 and intake
-                .splineToLinearHeading(new Pose2d(57, 25, Math.toRadians(0)), 0)
+//                .splineToLinearHeading(new Pose2d(57, 25, Math.toRadians(0)), 0)
+                .strafeToLinearHeading(new Vector2d(57,25), Math.toRadians(0))
                 .waitSeconds(2)
 
                 // line up with basket and score
-                .splineToLinearHeading(new Pose2d(53,53, Math.toRadians(-135)), 30)
+                .strafeToLinearHeading(new Vector2d(53,53), Math.toRadians(-135))
                 .waitSeconds(2)
 
                 // park
-                .splineToLinearHeading(new Pose2d(25, 0, Math.toRadians(180)), 90)
+                .splineToLinearHeading(new Pose2d(25, 0, Math.toRadians(180)), 160)
                 .waitSeconds(2)
 
 
